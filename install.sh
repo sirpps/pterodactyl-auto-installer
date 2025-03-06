@@ -1,4 +1,7 @@
-#!/bin/bash
+if (( $EUID != 0 )); then
+    echo "Silahkan masuk ke direktori root"
+    exit
+fi
 
 # Color
 BLUE='\033[0;34m'       
